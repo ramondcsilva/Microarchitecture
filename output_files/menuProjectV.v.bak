@@ -1,0 +1,20 @@
+module menuProjectV(
+	input  clock,
+	input	 reset,
+	input  [2:0]buttons,
+	output [7:0]leds_line,
+	output [4:0]leds_column,	
+	output [10:0]lcd
+	);
+	
+	assign leds_column[4:0] = ~leds_column[4:0];
+	
+project1 u0(
+  .clk_clk            (clk),            //         clk.clk
+  .buttons_export     (buttons),     //     buttons.export
+  .leds_column_export (leds_column), // leds_column.export
+  .reset_reset_n      (reset_reset_n),      //       reset.reset_n
+  .leds_line_export   (leds_line),   //   leds_line.export
+  .lcd_export         (lcd)          //         lcd.export
+	);
+endmodule	

@@ -1,0 +1,8 @@
+project1 u0(
+	  .clk_clk            (<connected-to-clk_clk>),            //         clk.clk
+	  .buttons_export     (<connected-to-buttons_export>),     //     buttons.export
+	  .leds_column_export (<connected-to-leds_column_export>), // leds_column.export
+	  .reset_reset_n      (<connected-to-reset_reset_n>),      //       reset.reset_n
+	  .leds_line_export   (<connected-to-leds_line_export>),   //   leds_line.export
+	  .lcd_export         (<connected-to-lcd_export>)          //         lcd.export
+);
